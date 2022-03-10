@@ -125,7 +125,11 @@
 **安装**
 
 最新安装视频教程：https://b23.tv/4ZdXS8c
-视频对应的sign文件夹在视频评论区域
+视频对应的sign文件夹 就是本项目 下载项目代码然后改名文件夹就好了
+本项目只允许个人使用 方便ios开发 不得用于违法犯罪行为 否则作者不承担任何法律以及连带责任 
+
+推荐服务器阿里云 购买链接
+https://www.aliyun.com/daily-act/ecs/activity_selection?userCode=igu2cmo4
  
 ### 鸣谢
 https://github.com/zhlynn/zsign
