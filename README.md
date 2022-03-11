@@ -110,19 +110,21 @@
 
 ### 部署
 
----
 
-
-
-**准备**
-
-​		*由于该项目环境制作十分复杂,所以使用docker来部署,使用到的都是编译后的jar包和静态文件*
-
- 		1.centos7 服务器必须是干净的 配置的话没什么要求太低会卡 推荐阿里云 阿里云可以使用内网oss分发很   快 如果使用其他服务器只能使用七牛云分发或者自己服务器的带宽
- 		2.域名一个 并申请ssl证书 拿到tomcat证书也就是jks后缀 必须是ca认证的 解析到服务器上
-		 3.下载发布包
 
 **安装**
+1. nginx 域名ssl证书
+2. 干净的服务器centos7 不要宝塔 确保安全组全开
+
+开始：
+
+1. 把nginx证书分别改名为 cert.pem 和 key.key 放入/sign/cert中
+2. 把 one.sh 里面的 你的域名 这四个大字换成你的域名
+3. 将sign传入到系统根目录 /
+4. 确定传入完毕后执行 chmod -R 777 /sign/*  && sh /sign/one.sh 等待完成
+5. 然后执行 sh /opt/two.sh 等待完成 访问域名即可
+   
+   初始账号密码admin admin mysql密码 Mysql666..
 
 最新安装视频教程：https://b23.tv/4ZdXS8c
 视频对应的sign文件夹 就是本项目 下载项目代码然后改名文件夹就好了
@@ -130,7 +132,7 @@
 
 推荐服务器阿里云 购买链接
 https://www.aliyun.com/daily-act/ecs/activity_selection?userCode=igu2cmo4
- 
+
 ### 鸣谢
 https://github.com/zhlynn/zsign
 

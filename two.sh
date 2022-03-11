@@ -1,4 +1,6 @@
 #!/bin/bash
+mv /sign/sign.service /usr/lib/systemd/system
+systemctl daemon-reload
 systemctl restart mysqld
 defaultmysqlpwd=`grep 'A temporary password' /var/log/mysqld.log | awk -F"root@localhost: " '{ print $2}' `
 mysql --connect-expired-password  -uroot -p${defaultmysqlpwd} <<EOF
@@ -6,7 +8,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'Mysql666..';
 use mysql;
 update user set host="%" where user="root";
 EOF
-systemctl restart mysqld
+systemctl restart mysqld 
 mysql --connect-expired-password  -uroot -pMysql666.. <<EOF
 
 
@@ -20,6 +22,7 @@ insert into user() values(null,'admin','admin',now(),1,0);
 EOF
 cd /opt
 systemctl start redis 
+systemctl enable mysqld
 systemctl enable redis
-nohup java -jar -Djava.security.egd=file:/dev/./urandom /opt/ios-super-sign-0.0.1-SNAPSHOT.jar > my.log 2>&1 &
-
+systemctl start sign
+systemctl enable sign

@@ -1,0 +1,15 @@
+[Unit]
+Description=sign
+After=syslog.target network.target remote-fs.target nss-lookup.target
+
+[Service]
+User=root
+Group=root
+
+Type=forking
+
+ExecStart=/opt/restart.sh
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,15 +1,11 @@
-1. nginx jks两种格式的域名ssl证书
-2. 备案域名 国外服务器无需备案
-3. docker 账号密码和镜像+
-4. 干净的服务器centos7
+1. nginx 域名ssl证书
+2. 干净的服务器centos7 不要宝塔 确保安全组全开
 
 开始：
-1. 修改nginx的证书名称 cert.pem cert.key 并复制到sign/cert下 
-2. 修改 nginx.conf 里面的域名 注意有两处
-3. 修改jks证书名为 cert.jks 放入sign/mode下
-4. 修改application-sign.yml #免签封装证书密码 为你的jks秘钥 #域名用于免签封装 为你的域名
-5. 修改 one.sh 账号密码和镜像名
-6. 将sign传入到系统根目录 /
-7. 确定传入完毕后执行 chmod -R 777 /sign/*  && sh /sign/one.sh   等待完成
-8. sh /opt/two.sh 等待完成
+1. 把nginx证书分别改名为 cert.pem 和 key.key 放入/sign/cert中
+2. 把 one.sh 里面的 你的域名 这四个大字换成你的域名
+3. 将sign传入到系统根目录 /
+4. 确定传入完毕后执行 chmod -R 777 /sign/*  && sh /sign/one.sh   等待完成
+5. sh /opt/two.sh 等待完成
+访问域名
 初始账号密码admin admin mysql密码 Mysql666..

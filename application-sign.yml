@@ -66,7 +66,7 @@ logging:
   file:
     path: spring.log
 #域名用于免签封装
-domain: https://域名/
+domain: https://替换域名/
 #上传安卓扣除设备数
 apkCount: 0
 #免签封装扣除设备数
