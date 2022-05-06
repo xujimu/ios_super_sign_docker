@@ -1,6 +1,6 @@
 ## ios_super_sign
 
-###### 超级签名 免签封装 安卓打包 企业签名 自助分发多合一系统
+###### 超级签名 免签封装 安卓打包 企业签名 自助分发多合一系统 超级签名MDM 企业签名MDM
 
 ### 主要功能
 
@@ -97,7 +97,8 @@
      - 简介编辑
      - 分发地址复制
      - 删除
-
+9. 超级签名MDM
+10. 企业签名MMD
 ### 架构
 
 ---
@@ -111,21 +112,23 @@
 ### 部署
 
 **安装**
-1. nginx 域名ssl证书
-2. 干净的服务器centos7 不要宝塔 确保安全组全开
+自2022年5月6日起步 支持宝塔搭建 
 
-开始：
+两个域名 主域名和mdm域名 一个装有宝塔的服务器
+1.上宝塔添加站点配置两个域名的https
+2.设置域名的反向代理 主域名反向代理端口10802 mdm域名端口10802
+3.设置nginx上传文件最大值
 
-1. 把nginx证书分别改名为 cert.pem 和 key.key 放入/sign/cert中
-2. 把 one.sh 里面的 你的域名 这四个大字换成你的域名
-3. 将sign传入到系统根目录 /
-4. 确定传入完毕后执行 chmod -R 777 /sign/*  && sh /sign/one.sh 等待完成
-5. 然后执行 sh /opt/two.sh 等待完成 访问域名即可
-   
-   初始账号密码admin admin mysql密码 Mysql666..
+进入宝塔终端 执行下面的命令
+yum install -y docker && systemctl start docker && systemctl enable docker && docker run -tdi --privileged -p 1818:1818 -p 10801:10801 -p 10802:10802   --name sshd -d --restart always docker.io/2524931333/centos7ssh:demo init && docker exec sshd /bin/sh /opt/restart.sh
 
-最新安装视频教程：https://b23.tv/DTueaRu
-视频对应的sign文件夹 就是本项目 下载项目代码然后改名文件夹就好了
+完成后进入网站 注册一个账号 默认第一个账号就是管理员账号
+登录后 进入系统设置 修改主域名和mdm域名 即可正常使用
+
+安装视频: https://www.bilibili.com/video/BV1UB4y117N2#reply111920410592
+
+项目开源地址: https://github.com/AugustRush/ios_super_sign
+
 本项目只允许个人使用 方便ios开发 不得用于违法犯罪行为 否则作者不承担任何法律以及连带责任 
 
 推荐服务器阿里云 购买链接
@@ -134,13 +137,9 @@ https://www.aliyun.com/daily-act/ecs/activity_selection?userCode=igu2cmo4
 ### 鸣谢
 https://github.com/zhlynn/zsign
 
-### 展示
+### 演示站
 
----
+https://test.wlznsb.cn
+账号密码都是super
 
-![](https://ae04.alicdn.com/kf/H8175f4efd00442899b70cdc100a4cc4d4.jpg)
-![](https://ae02.alicdn.com/kf/H54e91a41996f4ace9016d976b03679feU.jpg)
-![](https://ae02.alicdn.com/kf/Hf4fcdd3089884144aabb99fd0b9e0da3o.jpg)
-![](https://ae02.alicdn.com/kf/H42bbf17c9a7445ecbd0545870a316f33b.jpg)
-![](https://ae02.alicdn.com/kf/Hf224715e8e4448e2a7c7419b5ea0eb33u.jpg)
-![](https://ae04.alicdn.com/kf/H1887b5e3be104a2395633e768d8c3fabA.jpg)
+
