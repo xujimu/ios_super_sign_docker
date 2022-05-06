@@ -128,7 +128,7 @@ yum install -y docker && systemctl start docker && systemctl enable docker && do
 完成后进入网站 注册一个账号 默认第一个账号就是管理员账号
 登录后 进入系统设置 修改主域名和mdm域名 即可正常使用
 
-注意: docker本意可以理解为虚拟机 方便环境移植 本系统启动后会衍生出一个子系统 此系统的ssh服务器是开启的 端口为 1818 密码为Mysql666.. 此子系统安装了一些本系统需要的环境 包括mysql redis他们的密码都是Mysql666.. 不过mysql和redis的密码并不需要修改 并没有对外暴露端口 请务必在系统启动后 修改 子系统密码 否则会有被入侵的风险 
+注意: docker本意可以理解为虚拟机 方便环境移植 本系统启动后会衍生出一个子系统 此系统的ssh服务是开启的 端口为 1818 密码为Mysql666.. 此子系统安装了一些本系统需要的环境 包括mysql redis他们的密码都是Mysql666.. 不过mysql和redis的密码并不需要修改 并没有对外暴露端口 请务必在系统启动后 修改 子系统密码 否则会有被入侵的风险 
 
 安装视频: https://www.bilibili.com/video/BV1UB4y117N2#reply111920410592
 
