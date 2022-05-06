@@ -98,7 +98,9 @@
      - 分发地址复制
      - 删除
 9. 超级签名MDM
-10. 企业签名MMD
+10. 企业签名MDM
+11. 
+此版本已修复过段时间项目 502的问题
 ### 架构
 
 ---
@@ -127,7 +129,7 @@ yum install -y docker && systemctl start docker && systemctl enable docker && do
 
 安装视频: https://www.bilibili.com/video/BV1UB4y117N2#reply111920410592
 
-项目开源地址: https://github.com/AugustRush/ios_super_sign
+项目开源地址: https://github.com/xujimu/ios_super_sign
 
 本项目只允许个人使用 方便ios开发 不得用于违法犯罪行为 否则作者不承担任何法律以及连带责任 
 
