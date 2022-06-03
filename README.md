@@ -134,11 +134,6 @@ yum install -y docker && systemctl start docker && systemctl enable docker && do
 
 项目开源地址: https://github.com/xujimu/ios_super_sign
 
-本项目只允许个人使用 方便ios开发 不得用于违法犯罪行为 否则作者不承担任何法律以及连带责任 
-
-推荐服务器阿里云 购买链接
-https://www.aliyun.com/daily-act/ecs/activity_selection?userCode=igu2cmo4
-
 ### 鸣谢
 https://github.com/zhlynn/zsign
 
