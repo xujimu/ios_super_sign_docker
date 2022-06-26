@@ -123,7 +123,7 @@
 3.设置nginx上传文件最大值
 
 进入宝塔终端 执行下面的命令
-yum install -y docker && systemctl start docker && systemctl enable docker && docker run -tdi --privileged -p 1818:1818 -p 10801:10801 -p 10802:10802   --name sshd -d --restart always docker.io/2524931333/centos7ssh:demo init && docker exec sshd /bin/sh /opt/restart.sh
+yum install -y docker && systemctl start docker && systemctl enable docker && docker run -tdi --privileged -p 1818:1818 -p 10801:10801 -p 10802:10802   --name sshd -d --restart always docker.io/2524931333/centos7ssh:demo init && docker exec sshd /bin/sh /opt/remove_database.sh  && docker exec sshd /bin/sh /opt/restart.sh
 
 完成后进入网站 注册一个账号 默认第一个账号就是管理员账号
 登录后 进入系统设置 修改主域名和mdm域名 即可正常使用
